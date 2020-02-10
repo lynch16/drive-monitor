@@ -1,0 +1,12 @@
+{
+  "name": "drive-monitor",
+  "version": "1.0.0",
+  "description": "Requester for Google Drive",
+  "main": "index.js",
+  "author": "<will.lynch91@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/web-api": "^5.7.0",
+    "googleapis": "^47.0.0"
+  }
+}
