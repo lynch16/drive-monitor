@@ -5,11 +5,14 @@ const timeframe = interval * day;
 
 const message = `The${process.env.NAME ? ` ${process.env.NAME}` : ""} camera has not recorded data in ${interval} days. Should you check that its working properly?`
 
-new Monitor(
-  process.env.FOLDER_ID,
-  {
-    message,
-    channel: process.env.CHANNEL_ID,
-  },
-  timeframe
-).monitor();
+exports.handler = () => {
+  new Monitor(
+    process.env.FOLDER_ID,
+    {
+      message,
+      name: process.env.NAME,
+      channel: process.env.CHANNEL_ID,
+    },
+    timeframe
+  ).monitor();
+}
